@@ -15,6 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+APP_NAME = 'analysis'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -25,7 +26,11 @@ SECRET_KEY = '(#)*zz39^mec3pavaicggndzux!(qn(t3e&xvivn$j7xm_*i-p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+INDEX_PAGE = 'analysis.bhp.org.bw:8000'
+
+ALLOWED_HOSTS = ['192.168.5.104']
+
+SITE_ID = 40
 
 
 # Application definition
@@ -37,6 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_extensions',
+    'edc_model_admin.apps.AppConfig',
+    'edc_device.apps.AppConfig',
+    'edc_identifier.apps.AppConfig',
+    'edc_navbar.apps.AppConfig',
+    'analysis.apps.EdcProtocolAppConfig',
+    'analysis.apps.EdcBaseAppConfig',
     'analysis.apps.AnalysisConfig',
 ]
 
@@ -110,6 +123,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+# dashboards
+DASHBOARD_URL_NAMES = {
+}
+
+
+DASHBOARD_BASE_TEMPLATES = {
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
