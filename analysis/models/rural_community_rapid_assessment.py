@@ -3,9 +3,11 @@ from django.db import models
 from edc_base.model_mixins import BaseUuidModel
 from edc_identifier.model_mixins import NonUniqueSubjectIdentifierModelMixin
 from edc_search.model_mixins import SearchSlugManager
+from edc_registration.model_mixins import UpdatesOrCreatesRegistrationModelMixin
+from edc_base.sites import SiteModelMixin
 
 from ..choices import (
-    GENDER, ROLE, YES_NO, MEDIA, VACCINE_ACCESS,
+    COMMUNITY, DISTRICT, GENDER, ROLE, YES_NO, MEDIA, VACCINE_ACCESS,
     VACCINE_TRUST, YES_NO_NOT_SURE, VACCINE_IMPORTANCE)
 
 
@@ -24,17 +26,22 @@ class RuralCommunityRapidAssessmentManager(SearchSlugManager, models.Manager):
 
 
 class RuralCommunityRapidAssessment(
-        NonUniqueSubjectIdentifierModelMixin, BaseUuidModel):
+        NonUniqueSubjectIdentifierModelMixin, SiteModelMixin,
+        UpdatesOrCreatesRegistrationModelMixin, BaseUuidModel):
 
     subject_identifier = models.CharField(
         verbose_name="Subject Identifier",
         max_length=50,
         null=True)
 
-    report_date = models.DateField('Report Date')
+    report_date = models.DateField(
+        null=True,
+        blank=True,
+        verbose_name='Report Date')
 
     community = models.CharField(
         verbose_name='Community',
+        choices=COMMUNITY,
         null=True,
         blank=True,
         max_length=200)
@@ -47,6 +54,7 @@ class RuralCommunityRapidAssessment(
 
     district = models.CharField(
         verbose_name='District',
+        choices=DISTRICT,
         null=True,
         blank=True,
         max_length=200)

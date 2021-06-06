@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -28,10 +29,11 @@ DEBUG = True
 
 INDEX_PAGE = 'analysis.bhp.org.bw:8000'
 
-ALLOWED_HOSTS = ['192.168.5.104']
+ALLOWED_HOSTS = ['192.168.5.104', 'localhost']
 
 SITE_ID = 40
 
+ETC_DIR = os.path.join('/etc/', APP_NAME)
 
 # Application definition
 
@@ -44,8 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django_extensions',
+    'django_crypto_fields.apps.AppConfig',
     'edc_model_admin.apps.AppConfig',
     'edc_device.apps.AppConfig',
+    'edc_registration.apps.AppConfig',
     'edc_identifier.apps.AppConfig',
     'edc_navbar.apps.AppConfig',
     'analysis.apps.EdcProtocolAppConfig',
@@ -59,6 +63,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.sites.middleware.CurrentSiteMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
