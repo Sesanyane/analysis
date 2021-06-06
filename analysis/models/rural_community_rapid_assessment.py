@@ -7,8 +7,9 @@ from edc_registration.model_mixins import UpdatesOrCreatesRegistrationModelMixin
 from edc_base.sites import SiteModelMixin
 
 from ..choices import (
-    COMMUNITY, DISTRICT, GENDER, ROLE, YES_NO, MEDIA, VACCINE_ACCESS,
+    COMMUNITY, DISTRICT, GENDER, YES_NO, VACCINE_ACCESS,
     VACCINE_TRUST, YES_NO_NOT_SURE, VACCINE_IMPORTANCE)
+from .list_models import LearnVaccine, Role
 
 
 from edc_identifier.subject_identifier import SubjectIdentifier
@@ -84,10 +85,9 @@ class RuralCommunityRapidAssessment(
         blank=True,
         max_length=100)
 
-    role = models.CharField(
+    role = models.ManyToManyField(
+        Role,
         verbose_name='What is your current role?',
-        choices=ROLE,
-        null=True,
         blank=True,
         max_length=200)
 
@@ -104,11 +104,10 @@ class RuralCommunityRapidAssessment(
         choices=YES_NO,
         max_length=10)
 
-    covid19_learning = models.CharField(
+    covid19_learning = models.ManyToManyField(
+        LearnVaccine,
         verbose_name='If yes, where did you learn about Coronavirus/COVID-19 Vaccine?',
-        null=True,
         blank=True,
-        choices=MEDIA,
         max_length=100)
 
     covid19_learning_other = models.CharField(

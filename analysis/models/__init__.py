@@ -1,1 +1,2 @@
 from .rural_community_rapid_assessment import RuralCommunityRapidAssessment
+from .list_models import LearnVaccine, Role

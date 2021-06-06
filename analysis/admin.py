@@ -64,11 +64,9 @@ class RuralCommunityRapidAssessmentAdmin(ModelAdminMixin, admin.ModelAdmin):
             )}),)
     
     radio_fields = {'gender': admin.VERTICAL,
-                    'role': admin.VERTICAL,
                     'community': admin.VERTICAL,
                     'district': admin.VERTICAL,
                     'covid19_awareness': admin.VERTICAL,
-                    'covid19_learning': admin.VERTICAL,
                     'vaccine_assess': admin.VERTICAL,
                     'vaccine_assess_challanges': admin.VERTICAL,
                     'vaccine_trust': admin.VERTICAL,
@@ -84,7 +82,9 @@ class RuralCommunityRapidAssessmentAdmin(ModelAdminMixin, admin.ModelAdmin):
                 'full_name',
                 'gender',
                 'age_in_years',
-                'contracts',
-                'role',)
+                'contracts',)
+
+    filter_horizontal = (
+        'role', 'covid19_learning',)
 
     search_fields = ('subject_identifier',)
