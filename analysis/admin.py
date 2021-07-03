@@ -8,8 +8,8 @@ from edc_model_admin import (
     ModelAdminReadOnlyMixin, ModelAdminInstitutionMixin,
     ModelAdminRedirectOnDeleteMixin)
 
-from .models import RuralCommunityRapidAssessment
-from .forms import RuralCommunityRapidAssessmentForm
+from .models import RuralCommunityRapidAssessment, FoodSecurityLivelihood
+from .forms import RuralCommunityRapidAssessmentForm, FoodSecurityLivelihoodForm
 from .admin_site import analysis_admin
 
 
@@ -86,5 +86,29 @@ class RuralCommunityRapidAssessmentAdmin(ModelAdminMixin, admin.ModelAdmin):
 
     filter_horizontal = (
         'role', 'covid19_learning',)
+
+    search_fields = ('subject_identifier',)
+
+
+@admin.register(FoodSecurityLivelihood, site=analysis_admin)
+class FoodSecurityLivelihoodAdmin(ModelAdminMixin, admin.ModelAdmin):
+
+    form = FoodSecurityLivelihoodForm
+
+    fieldsets = (
+        (None, {
+            'fields': (
+                'subject_identifier',
+                'community',
+                'district',
+            )}),)
+    
+    radio_fields = {
+                    'community': admin.VERTICAL,
+                    'district': admin.VERTICAL,}
+
+    list_display = ('subject_identifier',
+                'community',
+                'district',)
 
     search_fields = ('subject_identifier',)

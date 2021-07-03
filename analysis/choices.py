@@ -71,7 +71,18 @@ COMMUNITY = (
     ('kokotsha_kgalagadi_south', 'Kokotsha, Kgalagadi South District'),
     ('tsabong_kgalagadi_south', 'Tsabong, Kgalagadi South District'),
     ('etsha_6_ngamiland_west', 'Etsha 6, Ngamiland West District'),
-    ('tsau_north_west', 'Tsau, North West District')
+    ('tsau_north_west', 'Tsau, North West District'),
+    ('kuke_ghanzi', 'Kuke, Ghanzi'),
+    ('inalegolo_kgalagadi_north', 'Inalegolo, Kgalagadi north'),
+    ('lehututu_kgalagadi_north', 'Lehututu, Kgalagadi north'),
+    ('hukuntsi_kgalagadi_north', 'Hukuntsi, Kgalagadi north'),
+    ('tshane_kgalagadi_north', 'Tshane, Kgalagadi north'),
+    ('diphuduhudu_kweneng', 'Diphuduhudu, Kweneng'),
+    ('sorilatholo_kweneng', 'Sorilatholo, Kweneng'),
+    ('tshwaane_kweneng', 'Tshwaane Kweneng'),
+    ('kaudwane_kweneng', 'Kaudwane Kweneng'),
+    ('bere_ghanzi', 'Bere, Ghanzi District'),
+    ('ghanzi', 'Ghanzi, Ghanzi District')
 )
 
 DISTRICT = (
@@ -82,4 +93,6 @@ DISTRICT = (
     ('ngamiland', 'Ngamiland District'),
     ('north_west', 'North West District'),
     ('ngamiland_west', 'Ngamiland West District'),
+    ('ghanzi', 'Ghanzi District'),
+    ('kweneng', 'Kweneng District'),
 )

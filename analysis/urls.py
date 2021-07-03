@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 
-from .views import AdministrationView, HomeView
+from .views import AdministrationView, FoodSecurityLivelihoodView, HomeView, VaccineAwarenessView
 from .admin_site import analysis_admin
 
 urlpatterns = [
@@ -38,5 +38,7 @@ urlpatterns = [
          name='switch_sites_url'),
     path('home/', HomeView.as_view(), name='home_url'),
     path('', HomeView.as_view(), name='home_url'),
+    path('vaccine', VaccineAwarenessView.as_view(), name='vaccine_home_url'),
+    path('food_security', FoodSecurityLivelihoodView.as_view(), name='food_security_home_url'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
