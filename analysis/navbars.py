@@ -11,9 +11,9 @@ analysis.append_item(
 
 analysis.append_item(
     NavbarItem(
-        name='food_security',
-        label='Food Security & Livelihood',
+        name='household',
+        label='Household',
         fa_icon='fa-user-plus',
-        url_name='food_security_home_url'))
+        url_name='household_url'))
 
 site_navbars.register(analysis)

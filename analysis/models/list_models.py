@@ -7,3 +7,6 @@ class LearnVaccine(ListModelMixin, BaseUuidModel):
 
 class Role(ListModelMixin, BaseUuidModel):
     pass
+
+class Assets(ListModelMixin, BaseUuidModel):
+    pass

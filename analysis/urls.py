@@ -19,8 +19,10 @@ from django.contrib import admin
 from django.contrib.auth.views import LogoutView
 from django.urls import include, path
 
-from .views import AdministrationView, FoodSecurityLivelihoodView, HomeView, VaccineAwarenessView
+from .views import AdministrationView, HouseholdDashboard, HouseholdView, HomeView, VaccineAwarenessView
 from .admin_site import analysis_admin
+
+household_identifier = 'H[0-9]{2}[A-Za-z0-9]{4}'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,6 +41,7 @@ urlpatterns = [
     path('home/', HomeView.as_view(), name='home_url'),
     path('', HomeView.as_view(), name='home_url'),
     path('vaccine', VaccineAwarenessView.as_view(), name='vaccine_home_url'),
-    path('food_security', FoodSecurityLivelihoodView.as_view(), name='food_security_home_url'),
+    path('household', HouseholdView.as_view(), name='household_url'),
+    path('dashboard', HouseholdDashboard.as_view(), name='dashboard_url'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,50 @@
+{% extends 'analysis/base.html' %}
+
+{% block main %}
+
+
+<div class="container">
+	<div class="raw">
+	
+		<div id="div-home-right" class="col-md-8">
+			<div class="panel panel-success">
+		      <div class="panel-heading">
+		      	<b>Head of household:</b> {{ head_of_household }} | 
+		      	<b>Total household members:</b> 0
+		      </div>
+		      <div class="panel-body">Panel Content</div>
+		    </div>
+   			
+		</div>
+		
+		<div id="div-home-right" class="col-md-4">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<p><h4>Household information</h4></p>
+				</div>
+				<div class="panel-body">
+				
+					Household Identifier: {{household_identifier}}
+					<table class="table table-hover">
+					    <thead>
+					      <tr>
+					        <th>Full name</th>
+					        <th>Relation</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					    {% for member in members %}
+					      <tr>
+					        <td>{{ member.0 }}</td>
+					        <td>{{ member.1 }}</td>
+					      </tr>
+					    {% endfor %}
+					    </tbody>
+					  </table>
+				</div>
+		    </div>
+		</div>
+
+	</div>
+</div>
+{% endblock main %}

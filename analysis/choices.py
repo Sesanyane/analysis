@@ -3,6 +3,117 @@ GENDER = (
     ('F', 'Female')
 )
 
+RELATIONSHIP = (
+    ('father', 'Father'),
+    ('mother', 'Mother'),
+    ('son', 'Son'),
+    ('daughter', 'Daughter'),
+    ('grandfather', 'Grandfather'),
+    ('grandmother', 'Grandmother'),
+    ('uncle', 'Uncle'),
+    ('mother_in_law', 'Mother in law'),
+    ('father_in_law', 'Father in law'),
+    ('son_in_law', 'Son in law'),
+    ('daughter_in_law', 'Daughter in law'),
+)
+
+ROOF_MATERIAL = (
+    ('grass_thatch_hay', 'Grass Thatch/Hay'),
+    ('wood', 'Wood'),
+    ('iron_sheet', 'Iron sheet'),
+    ('cement_concrete', 'Cement/concrete'),
+    ('dirt_bricks', 'Dirt bricks'),
+    ('plastic_sheeting', 'Plastic sheeting'),
+    ('asbestos_sheet', 'Asbestos sheet'),
+    ('other', 'Other'),
+)
+
+FLOOR_MATERIAL = (
+    ('cow_dung', 'Cow dung'),
+    ('soil_sand_mud', 'Soil/Sand/Mud'),
+    ('wood_planks', 'Wood/Planks'),
+    ('palm_bamboo', 'Palm/bamboo'),
+    ('cement_concrete', 'Cement/concrete'),
+    ('tiles_marble', 'Tiles/Marble'),
+    ('other', 'Other'),   
+)
+
+WALL_MATERIAL = (
+    ('mud_bricks_unburned', 'Mud bricks (unburned)'),
+    ('wood', 'Wood'),
+    ('sheet_metal', 'Sheet metal'),
+    ('rock', 'Rock'),
+    ('burned_bricks', 'Burned bricks'),
+    ('cement_concrete', 'Cement/concrete'),
+    ('straw_thatch', 'Straw/Thatch'),
+    ('cardboard', 'Cardboard')
+    ('other', 'Other'),
+)
+
+SANITARY_FACILITY = (
+    ('no_toilet_bush', 'No toilet (bush)'),
+    ('latrine', 'Latrine'),
+    ('barrel_bucket', 'Barrel/bucket'),
+    ('public_toilet', 'Public toilet'),
+    ('toilet_in_another_house', 'Toilet in another house'),
+    ('sanplat', 'Sanplat'),
+    ('other', 'Other'),
+)
+
+DRINKING_WATER = (
+    ('water_connected_in_house', 'Water connected in house'),
+    ('water_boozer_service', 'Water boozer service'),
+    ('bottled_water', 'Bottled water'),
+    ('public_borehole', 'Public borehole'),
+    ('rainwater_spring', 'Rainwater/spring'),
+    ('dam_canal', 'Dam/canal'),
+)
+
+HOUSE_ARRANGEMENT = (
+    ('rent', 'Rent'),
+    ('taken_care_of_by_family_friends', 'Taken care of by family/friends'),
+    ('living_in_relatives_compound', 'Living in relatives compound'),
+    ('other', 'Other, specify'),
+)
+
+WASTE_DISPOSAL = (
+    ('burning', 'Burning'),
+    ('deposit_in_open_pit', 'Deposit in open pit'),
+    ('burying_in_close_pit', 'Burying in close pit'),
+    ('throw_away_bush_stream', 'Throw away (bush, stream)'),
+    ('other', 'Other'),
+)
+
+COOKING_ENERGY = (
+    ('none_no_kitchen', 'None (no kitchen)'),
+    ('fire_wood', 'Fire wood'),
+    ('charcoal', 'Charcoal'),
+    ('gas_kerosene', 'Gas/kerosene'),
+    ('stem_straw', 'Stem/Straw'),
+    ('animal_scraps', 'Animal scraps'),
+    ('electricity', 'Electricity'),
+    ('other', 'Other, specify'),
+)
+
+LIGHTING = (
+    ('electricity_network', 'Electricity (network)'),
+    ('gas_kerosene_lamp', 'Gas/kerosene lamp'),
+    ('candle_torch', 'Candle/torch'),
+    ('solar_energy', 'Solar energy'),
+    ('electricity_generator', 'Electricity generator'),
+    ('fueled_light_lamp', 'Fueled light lamp'),
+    ('lamp_with_bateries', 'Lamp with batteries'),
+    ('no_ligtht', 'No light'),
+    ('other', 'Other, specify'),
+)
+
+EDUCATION = (
+    ('plse', 'PLSE'),
+    ('js', 'JC'),
+    ('bgcse', 'BGCSE'),
+    ('tertiary', 'Tertiary'),
+)
+
 ROLE = (
     ('kgosi', 'Kgosi'),
     ('kgosana', 'Kgosana'),
@@ -19,6 +130,22 @@ YES_NO = (
     ('y', 'Yes'),
     ('n', 'No')
 )
+
+YES_NO_NA = (
+    ('y', 'Yes'),
+    ('n', 'No'),
+    ('na', 'N/A')
+)
+
+
+MARITAL_STATUS = (
+    ('single', 'Single'),
+    ('married', 'Married'),
+    ('widowed', 'Widowed'),
+    ('divorced', 'Divorced'),
+    ('separated', 'Separated')
+)
+
 
 MEDIA = (
     ('tv', 'TV'),
@@ -95,4 +222,12 @@ DISTRICT = (
     ('ngamiland_west', 'Ngamiland West District'),
     ('ghanzi', 'Ghanzi District'),
     ('kweneng', 'Kweneng District'),
+)
+
+HOUSEHOLD_TYPE = (
+    ('male_headed', 'Male-headed'),
+    ('female_headed', 'Female-headed'),
+    ('elderly_male_headed', 'Elderly male-headed'),
+    ('elderly_female_headed', 'Elderly female-headed'),
+    ('child_headed', 'Child-headed'),
 )
