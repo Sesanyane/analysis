@@ -23,11 +23,10 @@ class AgriculturalLivestockProduction(BaseUuidModel):
         blank=True,
         max_length=200)
 
-    livestock_no = models.CharField(
+    livestock_no = models.IntegerField(
         verbose_name='How many livestock do you currently own?',
         null=True,
-        blank=True,
-        max_length=200)
+        blank=True,)
 
     increased_decreased = models.CharField(
         verbose_name='If increased or decreased',
