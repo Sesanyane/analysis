@@ -1,2 +1,3 @@
 from .household_admin import HouseholdAdmin
 from .rural_community_rapid_assessment_admin import RuralCommunityRapidAssessmentAdmin
+from .agricultural_production_admin import AgriculturalProductionAdmin

@@ -2,3 +2,6 @@ from .household import Household
 from .household_member import HouseholdMember
 from .list_models import Assets, LearnVaccine, Role
 from .rural_community_rapid_assessment import RuralCommunityRapidAssessment
+from .agric_crop_production import AgriculturalCropProduction
+from .agric_livestock_production import AgriculturalLivestockProduction
+from .agricultural_production import AgriculturalProduction

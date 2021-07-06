@@ -29,7 +29,7 @@ DEBUG = True
 
 INDEX_PAGE = 'analysis.bhp.org.bw:8000'
 
-ALLOWED_HOSTS = ['192.168.5.104', 'localhost']
+# ALLOWED_HOSTS = ['192.168.5.104', 'localhost']
 
 SITE_ID = 40
 

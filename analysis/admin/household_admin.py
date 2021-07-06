@@ -14,7 +14,6 @@ from ..models import Household
 from .household_member_admin import HouseholdMemberInlineAdmin
 
 
-
 class ModelAdminMixin(ModelAdminNextUrlRedirectMixin,
                       ModelAdminFormInstructionsMixin,
                       ModelAdminFormAutoNumberMixin, ModelAdminRevisionMixin,
@@ -22,7 +21,6 @@ class ModelAdminMixin(ModelAdminNextUrlRedirectMixin,
                       ModelAdminInstitutionMixin,
                       ModelAdminRedirectOnDeleteMixin,
                       ModelAdminSiteMixin):
-
     list_per_page = 10
     date_hierarchy = 'modified'
     empty_value_display = '-'
@@ -30,7 +28,6 @@ class ModelAdminMixin(ModelAdminNextUrlRedirectMixin,
 
 @admin.register(Household, site=analysis_admin)
 class HouseholdAdmin(ModelAdminMixin, admin.ModelAdmin):
-
     form = HouseholdForm
 
     fieldsets = (
@@ -51,16 +48,16 @@ class HouseholdAdmin(ModelAdminMixin, admin.ModelAdmin):
             )}),)
 
     inlines = [HouseholdMemberInlineAdmin, ]
-    
+
     radio_fields = {
-                    'village': admin.VERTICAL,
-                    'district': admin.VERTICAL,
-                    'kgotla': admin.VERTICAL,
-                    'household_type': admin.VERTICAL,
-                    'begin_interview': admin.VERTICAL}
+        'village': admin.VERTICAL,
+        'district': admin.VERTICAL,
+        'kgotla': admin.VERTICAL,
+        'household_type': admin.VERTICAL,
+        'begin_interview': admin.VERTICAL}
 
     list_display = ('household_identifier',
-                'village',
-                'district',)
+                    'village',
+                    'district',)
 
     search_fields = ('household_identifier',)

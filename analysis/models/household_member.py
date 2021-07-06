@@ -49,7 +49,7 @@ class HouseholdMember(BaseUuidModel):
         choices=EDUCATION,
         null=True,
         blank=True,
-        max_length=1)
+        max_length=8)
 
     school_attendance = models.CharField(
         verbose_name='Has been regularly attending school the past six months.',

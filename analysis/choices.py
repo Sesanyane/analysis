@@ -1,3 +1,39 @@
+CROPS = (
+    ('mabele', 'Mabele'),
+    ('groundnuts', 'GroundNuts'),
+    ('sunflower', 'Sunflower'),
+    ('maize_meal', 'Maize Meal(Mmidi)'),
+    ('watermelon', 'Watermelon(Legapu)'),
+    ('pumpkins', 'Pumpkins(Maphutse)'),
+    ('sweet_reeds', 'Sweet Reeds(Ntshe)'),
+    ('sugar_cane', 'Sugar Cane'),
+    ('eggplant', 'EggPlant'),
+    ('cabbage', 'Cabbage'),
+    ('beans', 'Beans'),
+    ('tomatoes', 'Tomatoes'),
+    ('onions', 'Onions'),
+    ('irish_potatoes', 'Irish Potatoes'),
+    ('sweet_potatoes', 'Sweet Potatoes'),
+    ('carrots', 'Carrots'),
+)
+
+COUNT = (
+    ('increased', 'Increased'),
+    ('decreased', 'Decreased')
+)
+
+LIVESTOCK = (
+    ('cattle', 'Cattle'),
+    ('goats', 'Goats'),
+    ('pigs', 'Pigs'),
+    ('sheep', 'Sheep'),
+    ('donkeys', 'Donkeys'),
+    ('chickens', 'Chickens'),
+    ('quinea_fowl', 'Guinea Fowls'),
+    ('ducks', 'Ducks'),
+    ('pigeons', 'Pigeons'),
+    ('Other', 'Other specify'),
+)
 GENDER = (
     ('M', 'Male'),
     ('F', 'Female')
@@ -46,8 +82,12 @@ WALL_MATERIAL = (
     ('burned_bricks', 'Burned bricks'),
     ('cement_concrete', 'Cement/concrete'),
     ('straw_thatch', 'Straw/Thatch'),
-    ('cardboard', 'Cardboard')
+    ('cardboard', 'Cardboard'),
     ('other', 'Other'),
+)
+WATERING = (
+    ('rain_fed', 'Rain-fed'),
+    ('irrigated', 'Irrigated'),
 )
 
 SANITARY_FACILITY = (
