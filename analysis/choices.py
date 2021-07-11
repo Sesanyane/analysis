@@ -22,6 +22,77 @@ COUNT = (
     ('decreased', 'Decreased')
 )
 
+FOOD_CATEGORIES = (
+    ('grains', 'Grains/Fours'),
+    ('tubers', 'Tubers/Roots'),
+    ('legumes', 'Legumes/Nuts/Seed'),
+    ('orange_vegetables', 'Orange vegetables'),
+    ('green_vegetables', 'Green leafy vegetables'),
+    ('orange_fruits', 'Orange fruits'),
+    ('other_fruits', 'Other fruits'),
+    ('flesh_meat', 'Flesh meat'),
+    ('organ_meat', 'Organ meat'),
+    ('fish', 'Fish'),
+    ('eggs', 'Eggs'),
+    ('milk', 'Milk and other dairy products'),
+    ('oils_and_fats', 'Oils and fats'),
+    ('sugar_and_sweets', 'Sugar and sweets'),
+    ('condiments', 'Condiments, spices and drinks'),
+)
+DAYS = (
+    ('one', 'One'),
+    ('two', 'Two'),
+    ('three', 'Three'),
+    ('four', 'Four'),
+    ('five', 'Five'),
+    ('six', 'Six'),
+    ('seven', 'Seven')
+)
+DURABLE_GOODS = (
+    ('furniture', 'Furniture'),
+    ('furnishings', 'Furnishings'),
+    ('lamp', 'Lamp'),
+    ('kitchen_utensils', 'Kitchen utensils'),
+    ('radio', 'Radio'),
+    ('fixed_mobile_telephone', 'Fixed/Mobile Telephone'),
+    ('tv', 'Tv/Video'),
+    ('bicycle', 'Bicycle'),
+    ('motorcycle', 'Motorcycle'),
+    ('basket', 'Basket/Jerry can/Jar'),
+    ('mosquito_net', 'Mosquito Net'),
+    ('solar_panels', 'Solar Panels'),
+    ('invertors', 'Invertors'),
+    ('generator_set', 'Generator set'),
+    ('satellite_dish', 'Satellite dish/decoder'),
+)
+
+SOCIAL_EVENTS = (
+    ('marriage', 'Marriage'),
+    ('funeral', 'Funeral'),
+    ('traditional_ceremonies', 'Traditional_ceremonies'),
+    ('church_tithes', 'Church tithes'),
+    ('other', 'Other'),
+)
+
+PERSONAl_OBJECTS = (
+    ('jewelry', 'Jewelry'),
+    ('clothing', 'Clothing, shoes and toys'),
+    ('other', 'Other non essential household costs')
+)
+
+SERVICES = (
+    ('school_fees', 'School fees and related costs'),
+    ('health_care_costs', 'Health care costs'),
+    ('other', 'Other essential household costs')
+)
+
+AGRICULTURAL_EXPENDITURE = (
+    ('land_rentals', 'School fees and related costs'),
+    ('other', 'Other agriculture investment'),
+    ('non_agricultural', 'Non-agricultural business investment'),
+    ('loan_payment', 'Loan payment'),
+)
+
 LIVESTOCK = (
     ('cattle', 'Cattle'),
     ('goats', 'Goats'),
